@@ -1,0 +1,28 @@
+[
+    {
+      "question": "Vad är 2+2?",
+      "options": [2, 4, 5],
+      "answer": 4
+    },
+    {
+      "question": "Vilken färg har himlen?",
+      "options": ["Blå", "Grön", "Röd"],
+      "answer": "Blå"
+    },
+    {
+     "question": "Hur många landskap finns det i Sverige?",
+  "options": [21, 15, 25],
+  "answer": 25
+    },
+    {
+     "question": "Vad heter Sveriges största sjö?",
+     "options": ["Vänern", "Vättern",  "Mälaren"],
+     "answer":  "Vänern"
+    },
+    {
+     "question": " Hur många invånare har Sverige? ",
+     "options":[ "8 miljoner", "10.5 miljoner",  "12 miljoner"],
+     "answer": "10.5 miljoner"
+    }
+  ]
+  
