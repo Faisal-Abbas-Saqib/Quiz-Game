@@ -48,6 +48,9 @@ if(r1.checked||r2.checked||r3.checked||i==0)
     r1.checked=false;
     r2.checked=false;
     r3.checked=false;
+    r1.disabled = false;
+    r2.disabled = false;
+    r3.disabled = false;   
     btn.innerHTML="Next"; if(i==5){btn.innerHTML="Finish";}
     
 }
@@ -66,6 +69,13 @@ document.getElementById("answerCorrect").innerHTML="";
   }
   else{document.getElementById("checkradio_click").innerHTML="Please select one option!!!";}
 }
+function disableRadioButtons() {
+  if (r1.checked || r2.checked || r3.checked) {
+    r1.disabled = true;
+    r2.disabled = true;
+    r3.disabled = true;
+  }
+}
 
 //radio buttons event listener.
 r1.addEventListener("click",checkanswer);
@@ -75,6 +85,7 @@ r1.addEventListener("click",checkanswer);
       if(r1.checked && data[i-1].options[0]==data[i-1].answer)
         {document.getElementById("answerCorrect").innerHTML="Correct answer"; correctanswer++;}
      else {document.getElementById("answerCorrect").innerHTML="Wrong answer";}
+          disableRadioButtons();
     }
 
 r2.addEventListener("click",checkanswer2);
@@ -84,6 +95,7 @@ r2.addEventListener("click",checkanswer2);
         if(r2.checked && data[i-1].options[1]==data[i-1].answer)
        {document.getElementById("answerCorrect").innerHTML="Correct answer"; correctanswer++;}
      else {document.getElementById("answerCorrect").innerHTML="Wrong answer";}
+          disableRadioButtons();
     }
 
 r3.addEventListener("click",checkanswer3);
@@ -94,6 +106,7 @@ r3.addEventListener("click",checkanswer3);
       {document.getElementById("answerCorrect").innerHTML="Correct answer"; correctanswer++;}
       
      else {document.getElementById("answerCorrect").innerHTML="Wrong answer";}
+           disableRadioButtons();
      } 
      
 });
